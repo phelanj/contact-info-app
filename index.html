@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Contact Info App</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+
+
+  <form class="card">
+  <div class = "row">
+    <div class="card__header">
+      <h4 class="center light white-text">EMAIL OR SMS?</h4>
+	  </div>
+    </div>
+    <div class="row">
+		<div class = "card__body">
+      <div class="col s4 offset-s4">
+        <form action="#">
+          <p>
+            <input name="group1" type="radio" id="test1" class="validate" onClick='unhideMail()' />
+            <label for="test1" class="white-text">Email</label>
+          </p>
+          <p>
+            <input name="group1" type="radio" id="test2" class="validate" onClick='unhideSMS()' />
+            <label for="test2" class="white-text">SMS</label>
+          </p>
+		  <br></br>
+        </form>
+      </div>
+
+      <div style='display:none;' class="input-field col s12" id='email-form'>
+        <form action="php/mail.php" method="POST">
+          <i class="icon-white material-icons prefix">email</i>
+          <input id="email" name="email" type="email" class="validate"><label class="left-align white-text" for="email">Email</label>
+        </form>
+	</div>
+	
+	
+
+
+      <div style='display:none;' class="input-field col s8 offset-s2" id='sms-form'>
+        <form action="php/sms.php" method="POST">
+          <i class="icon-white material-icons prefix">phone</i>
+          <input name="sms" type="tel" class="validate"><label class="left-align white-text" for="tel">Phone</label>
+          <!-- Dropdown Trigger -->
+          <div class="input-field col s12">
+            <select class="browser-default" method="POST" name="carrier">
+    <option value="" disabled selected>Choose Phone Carrier</option>
+    <option value="1">Verizon</option>
+    <option value="2">Sprint</option>
+    <option value="3">Option 3</option>
+  </select>
+          </div>
+          <br></br>
+          <br></br>
+          <br></br>
+        </form>
+      </div>
+		
+		
+	
+	      </div><a href="php/mail.php" class="card__button"><h4 class = "white-text light center">DONE</h4></a>
+    </div>
+	
+  </form>
+
+
+  <!--  Scripts-->
+  <script src="js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+
+</body>
+
+</html>
