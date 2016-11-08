@@ -13,12 +13,18 @@ function checkForm() {
 	if (emailChecked()) {
 	if (document.getElementById('email-text').value == "") {
 		Materialize.toast('No email input', 2000);
+		return false;
 	}
 	}
 	if (smsChecked()) {
 		if (document.getElementById('email-text').value == "") {
 		Materialize.toast('No phone input', 2000);
+		return false;
 	}
+	}
+	if (!emailChecked() && !smsChecked()) {
+		Materialize.toast('Select an option', 2000);
+		return false;
 	}
 }
 
