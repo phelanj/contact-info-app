@@ -38,9 +38,9 @@
       </div>
 
       <div style='display:none;' class="input-field col s12" id='email-form'>
-        <form action="php/mail.php" method="POST">
+        <form action="php/mail.php" method="POST" id = "email">
           <i class="icon-white material-icons prefix">email</i>
-          <input id="email" name="email" type="email" class="validate"><label class="left-align white-text" for="email">Email</label>
+          <input id="email-text" name="email" type="email" class="validate" required /><label class="left-align white-text" for="email">Email</label>
         </form>
 	</div>
 	
@@ -68,7 +68,7 @@
 		
 		
 	
-	      </div><a href="php/mail.php" class="card__button"><h4 class = "white-text light center">DONE</h4></a>
+	      </div><a href="#" onClick = "return checkForm()" class="card__button" style='display:none;'><h4 class = "white-text light center">DONE</h4></a>
     </div>
 	
   </form>
