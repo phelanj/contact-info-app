@@ -1,8 +1,8 @@
-@media (max-width: 400px) {
+/* @media (max-width: 600px) {
   :root {
     font-size: calc(14px + 1vw);
   }
-}
+} */
 body {
   line-height: 1.0;
   font-family: Roboto;
@@ -14,18 +14,13 @@ body {
 		  
 }
 
-.flex-wrap {
-  /* padding: 1em; */
-  display: flex;
-  -webkit-justify-content: center;
-          align-items: center;
-  height: 100vh;
-}
+
 
 .card {
 		background: #4db6ac ;
 		  width: 30rem;
 	  max-width: 600px;
+	  min-width:450px;
 	    box-shadow: 0px 18px 10px -10px rgba(0, 0, 0, 0.2);
   border-radius: .3em;
     /* color: #fff;	 */
